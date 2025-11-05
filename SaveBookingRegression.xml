@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Android Save Booking regression tests">
+    <test verbose="2" name="Android regression">
+        <classes>
+            <class name="tests.SaveBookingTest"/>
+        </classes>
+    </test>
+</suite>
