@@ -114,26 +114,26 @@ public class SearchPage {
     }
     @Step("Adding rooms")
     public void addRoom() {
-        WebDriverWait wait = new WebDriverWait(driver, GlobalVariables.shortTimeout);
+        WebDriverWait wait = new WebDriverWait(driver, GlobalVariables.longTimeout);
         wait.until(ExpectedConditions.visibilityOf(addRoomButton));
         addRoomButton.click();
     }
     @Step("Adding adults")
     public void addAdult() {
-        WebDriverWait wait = new WebDriverWait(driver, GlobalVariables.shortTimeout);
+        WebDriverWait wait = new WebDriverWait(driver, GlobalVariables.longTimeout);
         wait.until(ExpectedConditions.visibilityOf(addAdultButton));
         addAdultButton.click();
     }
 
     @Step("Confirming rooms and guests")
     public void confirmRoomsAndGuests() {
-        WebDriverWait wait = new WebDriverWait(driver, GlobalVariables.shortTimeout);
+        WebDriverWait wait = new WebDriverWait(driver, GlobalVariables.longTimeout);
         wait.until(ExpectedConditions.visibilityOf(confirmRoomAndGuestsButton));
         confirmRoomAndGuestsButton.click();
     }
     @Step("Searching booking")
     public void searchBooking() {
-        WebDriverWait wait = new WebDriverWait(driver, GlobalVariables.shortTimeout);
+        WebDriverWait wait = new WebDriverWait(driver, GlobalVariables.longTimeout);
         wait.until(ExpectedConditions.visibilityOf(searchButton));
         searchButton.click();
     }
@@ -146,7 +146,7 @@ public class SearchPage {
 
     @Step("Navigating back")
     public void navigateUp() {
-        WebDriverWait wait = new WebDriverWait(driver, GlobalVariables.shortTimeout);
+        WebDriverWait wait = new WebDriverWait(driver, GlobalVariables.longTimeout);
         wait.until(ExpectedConditions.visibilityOf(navigateUpButton));
         navigateUpButton.click();
     }
