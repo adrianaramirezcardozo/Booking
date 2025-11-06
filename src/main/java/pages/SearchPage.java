@@ -57,7 +57,7 @@ public class SearchPage {
     @AndroidFindBy(uiAutomator = "new UiSelector().className(\"android.widget.Button\").instance(3)")
     private RemoteWebElement searchButton;
 
-    @AndroidFindBy(uiAutomator = "new UiSelector().className(\"android.widget.ImageView\").instance(4)")
+    @AndroidFindBy(uiAutomator = "new UiSelector().className(\"android.widget.ImageView\").instance(5)")
     private RemoteWebElement addToWishlistButton;
 
     @AndroidFindBy(accessibility = "Navigate up")
@@ -68,6 +68,8 @@ public class SearchPage {
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
     }
     public boolean searchFieldTextIs(String expectedText) {
+        new WebDriverWait(driver, GlobalVariables.longTimeout)
+                .until(ExpectedConditions.visibilityOf(searchField));
         return searchField.getAttribute("text").equals(expectedText);
     }
     @Step("Clicking Sort button")
@@ -137,7 +139,7 @@ public class SearchPage {
     }
     @Step("Adding to wishlist")
     public void addToWhishlist() {
-        WebDriverWait wait = new WebDriverWait(driver, GlobalVariables.shortTimeout);
+        WebDriverWait wait = new WebDriverWait(driver, GlobalVariables.longTimeout);
         wait.until(ExpectedConditions.visibilityOf(addToWishlistButton));
         addToWishlistButton.click();
     }
